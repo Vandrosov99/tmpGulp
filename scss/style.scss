@@ -1,0 +1,18 @@
+@import '_vars.scss'; // импорт переменных, просто ставим переменную где хотим.
+@import '_mixnis.scss'; // импорт микинов(функций) использование будет через @include
+
+
+
+// шаблон, использование через extend;
+%tplborder {
+    border: 1px solid black;
+}
+
+body {
+    background: $color-main; //юзаем переменную
+    @extend %tplborder; // юзаеем шаблон
+}
+
+h1 {
+    @include fontz(100px, $color-green); // юзаем миксин + переменную
+}
